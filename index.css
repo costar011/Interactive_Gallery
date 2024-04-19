@@ -11,3 +11,21 @@ body {
     place-items: center;
     background-color: #ffc5c5;
 }
+
+.gallery {
+    position: relative;
+    width: 760px;
+    height: 305px;
+
+    &:hover :not(div[data-pos='0'], img)
+    {
+        cursor: pointer;
+    }
+    /*
+     :not() - 괄호 안의 매개변수 요소를 제외한 모든 요소의 스타일을 지정하는 데 사용
+    */
+
+    & .item {
+        position: absolute;
+    }
+}
