@@ -37,10 +37,4 @@ body {
             height: 100%;
         }
     }
-
-    & div[data-pos=`0`] {
-        width: 400px;
-        height: inherit;
-        z-index: 10;
-    }
 }
