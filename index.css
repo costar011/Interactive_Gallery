@@ -17,7 +17,10 @@ body {
     width: 760px;
     height: 305px;
 
-    &:hover:not(div[data-pos=`0`], img ) {cursor: pointer;}
+    /*
+    &:hover:not(div[data-pos=`0`], img )
+    {cursor: pointer;}
+    */
 
 /*
 :not() - 괄호 안의 매개변수 요소를 제외한 모든 요소의 스타일을 지정하는 데 사용
@@ -25,5 +28,26 @@ body {
 
     & .item {
         position: absolute;
+        width: 175px;
+        height: 150px;
+        overflow: hidden;
+        transition: transform 0.9s,  0.9s, height 0.9s;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    & div[data-pos=`0`] {
+        width: 400px;
+        height:inherit;
+        z-index: 10;
     }
 }
+
+div[data-pos=`0`] {transform: translate();}
+div[data-pos=`1`] {transform: translate();}
+div[data-pos=`2`] {transform: translate();}
+div[data-pos=`3`] {transform: translate();}
+div[data-pos=`4`] {transform: translate();}
